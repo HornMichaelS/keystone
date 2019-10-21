@@ -8,8 +8,8 @@ module.exports = function bindBodyParser (keystone, app) {
 	if (keystone.get('file limit')) {
 		bodyParserParams.limit = keystone.get('file limit');
 	}
-	if (keystone.get('bodyParser verify')) {
-		bodyParserParams.verify = keystone.get('bodyParser verify');
+	if (keystone.get('bodyparser verify')) {
+		bodyParserParams.verify = keystone.get('bodyparser verify');
 	}
 	app.use(bodyParser.json(bodyParserParams));
 	bodyParserParams.extended = true;
